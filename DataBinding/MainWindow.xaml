@@ -1,0 +1,22 @@
+﻿<Window x:Class="DataBinding.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DataBinding"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+   
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="my Name: "/>
+            <TextBox Text="{Binding Name}"  Width="150"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="my Age: "/>
+            <TextBox Text="{Binding Age}" Width="150"/>
+            <Button Command="{Binding IncreaseAgeCommand}" Content="+1"/>
+        </StackPanel>
+       
+    </StackPanel>
+</Window>
